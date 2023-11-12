@@ -1,0 +1,36 @@
+#exclude everything
+*
+.*
+
+#include what we need
+!.bashrc
+!.gitignore
+!.vimrc
+!.Xresources
+!.xinitrc
+!.xbindkeysrc
+
+#.config/
+!.config/
+!.config/autostart/
+!.config/autostart/**
+!.config/codeblocks/
+!.config/codeblocks/**
+!.config/dunst/
+!.config/dunst/**
+!.config/fish/
+!.config/fish/**
+!.config/htop/
+!.config/htop/**
+!.config/Mangohud/
+!.config/Mangohud/**
+!.config/mpv/
+!.config/mpv/**
+!.config/nvim/
+!.config/nvim/lua**
+!.config/vlc/
+!.config/vlc/vlcrc
+!.config/xpad/
+!.config/xpad/**
+!.config/yay/
+!.config/yay/**

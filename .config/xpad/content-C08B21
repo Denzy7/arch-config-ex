@@ -1,0 +1,10 @@
+apt mkdeps:
+build-essential
+
+wayland:	
+libwayland-bin
+libwayland-dev
+libegl-dev
+
+x11:
+libglx-dev

@@ -1,0 +1,12 @@
+width 300
+height 300
+x 752
+y 237
+follow_font 1
+follow_color 1
+sticky 0
+hidden 0
+back rgba(0,0,0,0.005)
+text rgb(0,0,0)
+fontname Sans 12
+content content-BGLRJ1

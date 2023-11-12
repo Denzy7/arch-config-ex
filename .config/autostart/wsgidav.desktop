@@ -1,0 +1,6 @@
+[Desktop Entry]
+Exec=/usr/bin/wsgidav -H 0.0.0.0 -r / --auth=anonymous
+Icon=folder-publicshare
+Name=wsgidav
+Terminal=False
+Type=Application
