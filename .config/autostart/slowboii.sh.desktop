@@ -1,0 +1,18 @@
+[Desktop Entry]
+Comment[en_GB]=
+Comment=
+Exec=/home/denzy/slowboii.sh
+GenericName[en_GB]=Mount /dev/sda3 (very slow drive not in fstab!)
+GenericName=Mount /dev/sda3 (very slow drive not in fstab!)
+Icon=dialog-scripts
+MimeType=
+Name[en_GB]=slowboii.sh
+Name=slowboii.sh
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-KDE-AutostartScript=true
+X-KDE-SubstituteUID=false
+X-KDE-Username=
