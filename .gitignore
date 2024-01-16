@@ -26,6 +26,7 @@
 !.config/Mangohud/**
 !.config/mpv/
 !.config/mpv/**
+.config/mpv/watch_later/**
 !.config/nvim/
 !.config/nvim/lua**
 !.config/vlc/
