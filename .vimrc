@@ -16,6 +16,10 @@ nnoremap <F5> :set invpaste paste?<CR>
 set pastetoggle=<F5>
 set showmode
 
+"tabline
+set showtabline=2
+
+"remaps
 inoremap <silent> <Esc> <Esc>`^
 inoremap <c-s> <Esc> :w<CR>
 nnoremap <c-s> :w<CR>
