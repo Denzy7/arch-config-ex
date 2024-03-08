@@ -35,3 +35,8 @@
 !.config/xpad/**
 !.config/yay/
 !.config/yay/**
+
+#.local
+!.local/
+!.local/bin
+!.local/bin/proton-run

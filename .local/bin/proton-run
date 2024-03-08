@@ -1,0 +1,2 @@
+#!/bin/sh
+exec env STEAM_COMPAT_CLIENT_INSTALL_PATH=~$HOME/.steam/steam STEAM_COMPAT_DATA_PATH=$HOME/.proton proton run "$@"
