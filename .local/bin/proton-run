@@ -1,2 +1,9 @@
 #!/bin/sh
-exec env STEAM_COMPAT_CLIENT_INSTALL_PATH=~$HOME/.steam/steam STEAM_COMPAT_DATA_PATH=$HOME/.proton proton run "$@"
+
+mangohud=$(command -v mangohud || echo "")
+obs_gamecapture=$(command -v obs-gamecapture || echo "")
+steampath="$HOME/.steam/steam"
+proton="$steampath/steamapps/common/Proton - Experimental/proton"
+
+exec env STEAM_COMPAT_CLIENT_INSTALL_PATH="$steampath" STEAM_COMPAT_DATA_PATH="$HOME/.proton" $obs_gamecapture $mangohud "$proton" run "$@"
+
