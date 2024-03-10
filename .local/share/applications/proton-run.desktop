@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Proton Run
+Comment=Run exe with proton
+Exec=~/.local/bin/proton-run %U
+Icon=steam
+Type=Application
+Terminal=false
+MimeType=application/vnd.microsoft.portable-executable;

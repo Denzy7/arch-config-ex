@@ -40,3 +40,6 @@
 !.local/
 !.local/bin
 !.local/bin/proton-run
+!.local/share
+!.local/share/applications
+!.local/share/applications/proton-run.desktop
