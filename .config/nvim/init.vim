@@ -1,1 +1,1 @@
-/home/denzy/.vimrc
+../../.vimrc
