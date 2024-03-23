@@ -28,6 +28,7 @@
 !.config/mpv/**
 .config/mpv/watch_later/**
 !.config/nvim/
+!.config/nvim/init.vim
 !.config/nvim/lua**
 !.config/vlc/
 !.config/vlc/vlcrc
