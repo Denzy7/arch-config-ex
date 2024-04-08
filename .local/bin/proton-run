@@ -3,8 +3,21 @@
 mangohud=$(command -v mangohud || echo "")
 obs_gamecapture=$(command -v obs-gamecapture || echo "")
 gamemode=$(command -v gamemoderun || echo "")
-steampath="$HOME/.steam/steam"
-proton="$steampath/steamapps/common/Proton 8.0/proton"
 
-exec env STEAM_COMPAT_CLIENT_INSTALL_PATH="$steampath" STEAM_COMPAT_DATA_PATH="$HOME/.proton" $obs_gamecapture $mangohud $gamemode "$proton" run "$@"
+steampath="/dev/null"
+if [ -d "$HOME/.steam/steam" ]; then
+    steampath="$HOME/.steam/steam"
+fi
+
+proton="$steampath/steamapps/common/Proton 8.0/proton"
+if [ -n "$USEPROTON" ]; then
+    proton="$USEPROTON"
+fi
+
+prefix="$HOME/.proton"
+if [ -n "$USEPREFIX" ]; then
+    prefix="$USEPREFIX"
+fi
+
+exec env STEAM_COMPAT_CLIENT_INSTALL_PATH="$steampath" STEAM_COMPAT_DATA_PATH="$prefix" $obs_gamecapture $mangohud $gamemode "$proton" run "$@"
 
