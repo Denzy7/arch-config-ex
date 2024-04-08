@@ -18,6 +18,7 @@ prefix="$HOME/.proton"
 if [ -n "$USEPREFIX" ]; then
     prefix="$USEPREFIX"
 fi
+mkdir -p "$prefix"
 
 exec env STEAM_COMPAT_CLIENT_INSTALL_PATH="$steampath" STEAM_COMPAT_DATA_PATH="$prefix" $obs_gamecapture $mangohud $gamemode "$proton" run "$@"
 
