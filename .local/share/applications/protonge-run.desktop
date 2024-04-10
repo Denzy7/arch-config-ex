@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Proton-GE Run
+Comment=Run exe with installed proton GE
+Exec=env USEPROTON=/usr/share/steam/compatibilitytools.d/proton-ge-custom/proton USEPREFIX=~/.proton-ge ~/.local/bin/proton-run %U
+Icon=steam
+Type=Application
+Terminal=false
+MimeType=application/vnd.microsoft.portable-executable;application/x-ms-dos-executable;
