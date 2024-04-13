@@ -37,7 +37,7 @@ vim.g.loaded_netrwPlugin = 1
 
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
-vim.cmd[[colorscheme tokyonight]]
+vim.cmd[[colorscheme tokyonight-night]]
 
 vim.cmd[[filetype plugin on]] --for nerdcommenter
 
