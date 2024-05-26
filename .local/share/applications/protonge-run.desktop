@@ -5,4 +5,4 @@ Exec=USEPROTON=/usr/share/steam/compatibilitytools.d/proton-ge-custom/proton USE
 Icon=steam
 Type=Application
 Terminal=false
-MimeType=application/vnd.microsoft.portable-executable;application/x-ms-dos-executable;
+MimeType=application/vnd.microsoft.portable-executable;application/x-ms-dos-executable;application/x-bat;
