@@ -11,6 +11,7 @@ require('packer').startup(function(use)
     use 'preservim/nerdcommenter' -- commenter 🤷
     use 'tikhomirov/vim-glsl' --for glsl
     use 'RaafatTurki/hex.nvim' --hex edit
+    use 'mfussenegger/nvim-jdtls' --jdtls
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }

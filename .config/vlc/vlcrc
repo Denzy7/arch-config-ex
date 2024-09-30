@@ -1,5 +1,5 @@
 ﻿###
-###  vlc 3.0.20
+###  vlc 3.0.21
 ###
 
 ###
@@ -1060,7 +1060,7 @@
 #equalizer-preset=flat
 
 # Bands gain (string)
-#equalizer-bands=
+equalizer-bands=0 0 0 0 0 0 0 0 0 0
 
 # Two pass (boolean)
 #equalizer-2pass=0
@@ -2874,7 +2874,7 @@ qt-privacy-ask=0
 #sout-avi-subject=
 
 # Encoder (string)
-#sout-avi-encoder=VLC Media Player - 3.0.20 Vetinari
+#sout-avi-encoder=VLC Media Player - 3.0.21 Vetinari
 
 # Keywords (string)
 #sout-avi-keywords=
@@ -3833,7 +3833,7 @@ qt-privacy-ask=0
 #audio-time-stretch=1
 
 # Audio output module (string)
-#aout=
+aout=any
 
 # Media role (string)
 #role=video
@@ -3971,7 +3971,7 @@ qt-privacy-ask=0
 #deinterlace-mode=auto
 
 # Video output module (string)
-#vout=
+vout=any
 
 # Video filter module (string)
 #video-filter=
@@ -4265,7 +4265,7 @@ qt-privacy-ask=0
 #random=0
 
 # Repeat all (boolean)
-loop=1
+#loop=0
 
 # Repeat current item (boolean)
 #repeat=0

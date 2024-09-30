@@ -1,4 +1,4 @@
 function fish_greeting
-	echo Hello! The Time is (date +%T)
+	echo こんにちは！今時間は(date +%T)
 end
 

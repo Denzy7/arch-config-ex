@@ -53,5 +53,5 @@ fi
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 dwm&
-
+redshift -l -0.55:36.95 -t 6500:3500 -b 0.6:0.8&
 exec kitty
