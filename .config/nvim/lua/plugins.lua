@@ -12,6 +12,7 @@ require('packer').startup(function(use)
     use 'tikhomirov/vim-glsl' --for glsl
     use 'RaafatTurki/hex.nvim' --hex edit
     use 'mfussenegger/nvim-jdtls' --jdtls
+    use 'lukas-reineke/indent-blankline.nvim' -- working with python and yaml 🤷
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
@@ -47,13 +48,14 @@ require('lualine').setup()
 require('nvim-tree').setup()
 
 require('hex').setup()
+require("ibl").setup()
 
 local lspconfig = require('lspconfig')
 -- Add additional capabilities supported by nvim-cmp
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'pylsp', 'cmake', 'gdscript', 'lua_ls', 'glslls', 'tsserver'}
+local servers = { 'pylsp', 'cmake', 'gdscript', 'lua_ls', 'glslls'--[[, 'tsserver']]}
 for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup {
         capabilities = capabilities
