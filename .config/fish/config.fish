@@ -6,6 +6,7 @@ end
 
 # Created by `pipx` on 2021-12-13 20:55:31
 set PATH $PATH /home/denzy/.local/bin
+set -x MANPAGER "nvim +Man!"
 
 alias sshtrmx 'ssh u0_a147@192.168.43.1 -p 8022 -i $HOME/pk-droid'
 alias netusage 'vnstati -ru -L -h -o - | feh -'
