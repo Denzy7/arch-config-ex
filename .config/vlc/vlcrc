@@ -1524,7 +1524,7 @@ equalizer-bands=0 0 0 0 0 0 0 0 0 0
 [freetype] # Freetype2 font renderer
 
 # Font (string)
-#freetype-font=Serif Bold
+freetype-font=Noto Sans
 
 # Monospace Font (string)
 #freetype-monofont=Monospace
@@ -1545,7 +1545,7 @@ equalizer-bands=0 0 0 0 0 0 0 0 0 0
 #freetype-bold=0
 
 # Background opacity (integer)
-#freetype-background-opacity=0
+freetype-background-opacity=128
 
 # Background color (integer)
 #freetype-background-color=0
