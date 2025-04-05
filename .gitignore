@@ -32,8 +32,6 @@
 !.config/nvim/lua**
 !.config/vlc/
 !.config/vlc/vlcrc
-!.config/xpad/
-!.config/xpad/**
 !.config/yay/
 !.config/yay/**
 
