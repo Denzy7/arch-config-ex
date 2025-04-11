@@ -13,7 +13,7 @@ filetype indent on
 
 "paste indent
 nnoremap <F5> :set invpaste paste?<CR>
-set pastetoggle=<F5>
+"set pastetoggle=<F5>
 set showmode
 
 "tabline
