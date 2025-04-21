@@ -1,5 +1,5 @@
 [Desktop Entry]
-Exec=/usr/bin/wsgidav -H 0.0.0.0 -r / --auth=anonymous
+Exec=/usr/bin/wsgidav -c ~/wsgidav.plain.yaml
 Icon=folder-publicshare
 Name=wsgidav
 Terminal=False
