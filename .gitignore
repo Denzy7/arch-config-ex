@@ -36,6 +36,8 @@
 !.config/vlc/vlcrc
 !.config/yay/
 !.config/yay/**
+!.config/yt-dlp/
+!.config/yt-dlp/**
 
 #.local
 !.local/
