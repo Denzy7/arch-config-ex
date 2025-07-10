@@ -3,6 +3,7 @@ require('packer').startup(function(use)
     use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
     use 'hrsh7th/nvim-cmp' -- auto
     use 'hrsh7th/cmp-nvim-lsp' --lsp src
+    use 'hrsh7th/cmp-nvim-lsp-signature-help' -- overloads?
     use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
     use 'L3MON4D3/LuaSnip' -- Snippets plugin
     use 'folke/tokyonight.nvim' --THEME: no one sleep at this place
@@ -13,6 +14,8 @@ require('packer').startup(function(use)
     use 'RaafatTurki/hex.nvim' --hex edit
     use 'mfussenegger/nvim-jdtls' --jdtls
     use 'lukas-reineke/indent-blankline.nvim' -- working with python and yaml 🤷
+    use 'FelipeLema/cmp-async-path' --paths
+    use({"petertriho/cmp-git", requires = "nvim-lua/plenary.nvim"}) --git src
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
@@ -88,6 +91,9 @@ cmp.setup {
     end,
   },sources = {
       {name = 'nvim_lsp'},
+      {name = 'nvim_lsp_signature_help' },
+      {name = 'async_path' },
+      { name = "git" },
       {name = 'luasnip'}
   },mapping = cmp.mapping.preset.insert(
   {
@@ -119,6 +125,7 @@ cmp.setup {
   }
   )
 }
+require("cmp_git").setup()
 --global --
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
