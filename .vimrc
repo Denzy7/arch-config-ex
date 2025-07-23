@@ -24,6 +24,9 @@ inoremap <silent> <Esc> <Esc>`^
 inoremap <c-s> <Esc> :w<CR>
 nnoremap <c-s> :w<CR>
 nnoremap <leader>tn :tabnew<CR>
+nnoremap <leader>Z :wqa<CR>
+nnoremap <leader>z :q<CR>
+nnoremap <C-c> :confirm qa!
 "close terminal w\ esc
 tnoremap <Esc> <C-\><C-n>
 
