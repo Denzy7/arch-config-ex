@@ -9,6 +9,11 @@ set shiftwidth=4
 set expandtab
 set autoindent
 set smartindent
+
+"case search
+set ignorecase
+set smartcase
+
 filetype indent on
 
 "paste indent

@@ -350,6 +350,38 @@
 # List special files (boolean)
 #list-special-files=0
 
+[live555] # RTP/RTSP/SDP demuxer (using Live555)
+
+# Use RTP over RTSP (TCP) (boolean)
+#rtsp-tcp=0
+
+# Client port (integer)
+#rtp-client-port=-1
+
+# Force multicast RTP via RTSP (boolean)
+#rtsp-mcast=0
+
+# Tunnel RTSP and RTP over HTTP (boolean)
+#rtsp-http=0
+
+# HTTP tunnel port (integer)
+#rtsp-http-port=80
+
+# Kasenna RTSP dialect (boolean)
+#rtsp-kasenna=0
+
+# WMServer RTSP dialect (boolean)
+#rtsp-wmserver=0
+
+# Username (string)
+#rtsp-user=
+
+# Password (string)
+#rtsp-pwd=
+
+# RTSP frame buffer size (integer)
+#rtsp-frame-buffer-size=250000
+
 [nfs] # NFS input
 
 # Set NFS uid/guid automatically (boolean)
@@ -604,6 +636,12 @@
 
 # Musicbrainz Server (string)
 #musicbrainz-server=musicbrainz.org
+
+# CDDB Server (string)
+#cddb-server=freedb.videolan.org
+
+# CDDB port (integer)
+#cddb-port=80
 
 [diracsys] # Dirac video demuxer
 
@@ -1436,6 +1474,11 @@ equalizer-bands=0 0 0 0 0 0 0 0 0 0
 # Password (string)
 #telnet-password=
 
+[lirc] # Infrared remote control interface
+
+# Change the lirc configuration file (string)
+#lirc-file=
+
 [oldrc] # Remote control interface
 
 # Show stream position (boolean)
@@ -1776,11 +1819,6 @@ freetype-background-opacity=128
 # Bar Height in pixel (integer)
 #audiobargraph_v-barHeight=400
 
-[ncurses] # Ncurses interface
-
-# Filebrowser starting point (string)
-#browse-dir=
-
 [qt] # Qt interface
 
 # Start in minimal view (without menus) (boolean)
@@ -1860,23 +1898,6 @@ qt-privacy-ask=0
 
 # When to raise the interface (integer)
 #qt-auto-raise=1
-
-[skins2] # Skinnable Interface
-
-# Skin to use (string)
-#skins2-last=
-
-# Config of last used skin (string)
-#skins2-config=
-
-# Enable transparency effects (boolean)
-#skins2-transparency=0
-
-# Use a skinned playlist (boolean)
-#skinned-playlist=1
-
-# Display video in a skinned window if any (boolean)
-#skinned-video=1
 
 [podcast] # Podcasts
 
@@ -2758,6 +2779,17 @@ qt-privacy-ask=0
 # Peak height (integer)
 #spect-peak-height=1
 
+[goom] # Goom effect
+
+# Goom display width (integer)
+#goom-width=800
+
+# Goom display height (integer)
+#goom-height=500
+
+# Goom animation speed (integer)
+#goom-speed=6
+
 [glspectrum] # 3D OpenGL spectrum visualization
 
 # Video width (integer)
@@ -2765,6 +2797,32 @@ qt-privacy-ask=0
 
 # Video height (integer)
 #glspectrum-height=300
+
+[projectm] # libprojectM effect
+
+# projectM preset path (string)
+#projectm-preset-path=/usr/share/projectM/presets
+
+# Title font (string)
+#projectm-title-font=/usr/share/fonts/TTF/DejaVuSans.ttf
+
+# Font menu (string)
+#projectm-menu-font=/usr/share/fonts/TTF/DejaVuSansMono.ttf
+
+# Video width (integer)
+#projectm-width=800
+
+# Video height (integer)
+#projectm-height=500
+
+# Mesh width (integer)
+#projectm-meshx=32
+
+# Mesh height (integer)
+#projectm-meshy=24
+
+# Texture size (integer)
+#projectm-texture-size=1024
 
 [vaapi_filters] # Video Accelerated API filters
 
@@ -2927,6 +2985,38 @@ qt-privacy-ask=0
 
 # A/52 dynamic range compression (boolean)
 #a52-dynrng=1
+
+[kate] # Kate overlay decoder
+
+# Formatted Subtitles (boolean)
+#kate-formatted=1
+
+# Use Tiger for rendering (boolean)
+#kate-use-tiger=1
+
+# Rendering quality (float)
+#kate-tiger-quality=1.000000
+
+# Default font description (string)
+#kate-tiger-default-font-desc=
+
+# Default font effect (integer)
+#kate-tiger-default-font-effect=0
+
+# Default font effect strength (float)
+#kate-tiger-default-font-effect-strength=0.500000
+
+# Default font color (integer)
+#kate-tiger-default-font-color=16777215
+
+# Default font alpha (integer)
+#kate-tiger-default-font-alpha=255
+
+# Default background color (integer)
+#kate-tiger-default-background-color=16777215
+
+# Default background alpha (integer)
+#kate-tiger-default-background-alpha=0
 
 [telx] # Teletext subtitles decoder
 
@@ -4265,7 +4355,7 @@ vout=any
 #random=0
 
 # Repeat all (boolean)
-#loop=0
+loop=1
 
 # Repeat current item (boolean)
 #repeat=0
