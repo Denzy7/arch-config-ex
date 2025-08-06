@@ -15,6 +15,7 @@ set TMX_HOME /data/data/com.termux/files/home
 
 set SD /storage/0000-0000
 set ANDROID_SDK ~/Android/Sdk
+set ANDROID_HOME $ANDROID_SDK
 set ANDROID_NDK $ANDROID_SDK/ndk/23.1.7779620
 
 # fish flatpak fix
