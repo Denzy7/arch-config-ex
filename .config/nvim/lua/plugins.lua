@@ -7,8 +7,17 @@ require('packer').startup(function(use)
     use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
     use 'L3MON4D3/LuaSnip' -- Snippets plugin
     use 'folke/tokyonight.nvim' --THEME: no one sleep at this place
-    use 'nvim-tree/nvim-tree.lua' -- file manager
+    --use 'nvim-tree/nvim-tree.lua' -- file manager
     use 'nvim-tree/nvim-web-devicons' -- file manager icons
+    use({
+        "nvim-neo-tree/neo-tree.nvim", --better file manager (allegedly)
+        branch = "v3.x",
+        requires = {
+            "nvim-lua/plenary.nvim",
+            "MunifTanjim/nui.nvim",
+            "nvim-tree/nvim-web-devicons",
+        }
+    })
     use 'preservim/nerdcommenter' -- commenter 🤷
     use 'tikhomirov/vim-glsl' --for glsl
     use 'RaafatTurki/hex.nvim' --hex edit
@@ -48,8 +57,15 @@ vim.cmd[[filetype plugin on]] --for nerdcommenter
 
 require('lualine').setup()
 
-require('nvim-tree').setup()
+--require('nvim-tree').setup()
+require('neo-tree').setup({
+    window = {
+        mappings = {
+            ["t"] = "open_tab_drop"
+        }
+    }
 
+})
 require('hex').setup()
 require("ibl").setup()
 
@@ -130,6 +146,7 @@ require("cmp_git").setup()
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
+vim.keymap.set("n", "<leader>e", "<Cmd>Neotree<CR>")
 
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('UserLspConfig', {}),
