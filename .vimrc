@@ -36,7 +36,7 @@ nnoremap <C-c> :confirm qa!
 tnoremap <Esc> <C-\><C-n>
 "black hole to avoid copying
 nnoremap <leader>d "_d
-nnoremap <leader>y "_y
+vnoremap <leader>d "_d
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
 if has('nvim')
