@@ -1,6 +1,6 @@
 require('packer').startup(function(use)
+    use 'neovim/nvim-lspconfig' -- lsp configs
     use 'wbthomason/packer.nvim' -- Package manager
-    use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
     use 'hrsh7th/nvim-cmp' -- auto
     use 'hrsh7th/cmp-nvim-lsp' --lsp src
     use 'hrsh7th/cmp-nvim-lsp-signature-help' -- overloads?
@@ -29,6 +29,7 @@ require('packer').startup(function(use)
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
+    use 'ntpeters/vim-better-whitespace' -- whitespace bad!
 end)
 
 function leave_snippet()
@@ -69,31 +70,25 @@ require('neo-tree').setup({
 require('hex').setup()
 require("ibl").setup()
 
-local lspconfig = require('lspconfig')
 -- Add additional capabilities supported by nvim-cmp
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'pylsp', 'cmake', 'gdscript', 'lua_ls', 'glslls'--[[, 'tsserver']]}
+local servers = { 'clangd', 'pylsp', 'cmake', 'gdscript', 'lua_ls', 'glslls'--[[, 'tsserver']]}
 for _, lsp in ipairs(servers) do
-    lspconfig[lsp].setup {
-        capabilities = capabilities
-    }
+    vim.lsp.enable(lsp)
+    vim.lsp.config(lsp,{ capabilities = capabilities})
 end
+
 -- manual clangd setup
-lspconfig['clangd'].setup
-{
+vim.lsp.config("clangd", {
     cmd = {
-        "clangd",
-        "-j=2",
-        "--header-insertion=never",
-        -- clangd with background index is a source of many problems!!! and will 
+        "clangd","-j=2", "--header-insertion=never", "--clang-tidy",
+        -- clangd with background index is a source of many problems!!! and will
         -- slow down your machine, even with an ssd and lots of ram and cpu
-        --"--background-index", 
-        "--clang-tidy",
+        --"--background-index",
     },
-    capabilities = capabilities
-}
+})
 
 -- luasnip setup
 local luasnip = require 'luasnip'
