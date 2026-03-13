@@ -139,6 +139,7 @@ fs_dav_provider:
     #: Serve symbolic link files and folders (default: false)
     follow_symlinks: true
 
+honor_mtime_header: true
 # ==============================================================================
 # AUTHENTICATION
 http_authenticator:
