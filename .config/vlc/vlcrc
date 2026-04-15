@@ -1,5 +1,5 @@
 ﻿###
-###  vlc 3.0.21
+###  vlc 3.0.22
 ###
 
 ###
@@ -1860,6 +1860,9 @@ freetype-background-opacity=128
 # Continue playback? (integer)
 #qt-continue=1
 
+# Enable Dark Mode (boolean)
+#qt-dark-palette=0
+
 # Embed the file browser in open dialog (boolean)
 #qt-embedded-open=0
 
@@ -1905,9 +1908,6 @@ qt-privacy-ask=0
 #podcast-urls=
 
 [upnp] # Universal Plug'n'Play
-
-# SAT>IP channel list (string)
-#satip-channelist=auto
 
 # Custom SAT>IP channel list URL (string)
 #satip-channellist-url=
@@ -2932,7 +2932,7 @@ qt-privacy-ask=0
 #sout-avi-subject=
 
 # Encoder (string)
-#sout-avi-encoder=VLC Media Player - 3.0.21 Vetinari
+#sout-avi-encoder=VLC Media Player - 3.0.22 Vetinari
 
 # Keywords (string)
 #sout-avi-keywords=
@@ -3696,6 +3696,9 @@ sout-x264-tune=film
 # Frames Threads (integer)
 #dav1d-thread-frames=0
 
+# All Layers (boolean)
+#dav1d-all-layers=0
+
 [vpx] # WebM video decoder
 
 # Quality mode (integer)
@@ -3923,7 +3926,7 @@ sout-x264-tune=film
 #audio-time-stretch=1
 
 # Audio output module (string)
-aout=any
+aout=pulse
 
 # Media role (string)
 #role=video
