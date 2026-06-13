@@ -30,6 +30,7 @@ require('packer').startup(function(use)
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
     use 'ntpeters/vim-better-whitespace' -- whitespace bad!
+    use 'lewis6991/gitsigns.nvim' -- git hunks made easy
 end)
 
 function leave_snippet()
