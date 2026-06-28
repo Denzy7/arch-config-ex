@@ -1,5 +1,5 @@
 ﻿###
-###  vlc 3.0.22
+###  vlc 3.0.23
 ###
 
 ###
@@ -2569,14 +2569,6 @@ qt-privacy-ask=0
 # Bluescreen V tolerance (integer)
 #bluescreen-vt=17
 
-[postproc] # Video post processing filter
-
-# Post processing quality (integer)
-#postproc-q=6
-
-# FFmpeg post processing filter chains (string)
-#postproc-name=default
-
 [hqdn3d] # High Quality 3D Denoiser filter
 
 # Spatial luma strength (0-254) (float)
@@ -2932,7 +2924,7 @@ qt-privacy-ask=0
 #sout-avi-subject=
 
 # Encoder (string)
-#sout-avi-encoder=VLC Media Player - 3.0.22 Vetinari
+#sout-avi-encoder=VLC Media Player - 3.0.23 Vetinari
 
 # Keywords (string)
 #sout-avi-keywords=
@@ -3335,68 +3327,6 @@ qt-privacy-ask=0
 
 # Additional fonts directory (string)
 #ssa-fontsdir=
-
-[qsv] # Intel QuickSync Video encoder for MPEG4-Part10/MPEG2 (aka H.264/H.262)
-
-# Enable software mode (boolean)
-#sout-qsv-software=0
-
-# Codec Profile (string)
-#sout-qsv-h264-profile=unspecified
-
-# Codec Level (string)
-#sout-qsv-h264-level=unspecified
-
-# Codec Profile (string)
-#sout-qsv-mpeg2-profile=unspecified
-
-# Codec Level (string)
-#sout-qsv-mpeg2-level=unspecified
-
-# Group of Picture size (integer)
-#sout-qsv-gop-size=32
-
-# Group of Picture Reference Distance (integer)
-#sout-qsv-gop-refdist=4
-
-# IDR interval (integer)
-#sout-qsv-idr-interval=0
-
-# Target Usage (string)
-#sout-qsv-target-usage=quality
-
-# Rate Control Method (string)
-#sout-qsv-rc-method=vbr
-
-# Quantization parameter (integer)
-#sout-qsv-qp=0
-
-# Quantization parameter for I-frames (integer)
-#sout-qsv-qpi=0
-
-# Quantization parameter for P-frames (integer)
-#sout-qsv-qpp=0
-
-# Quantization parameter for B-frames (integer)
-#sout-qsv-qpb=0
-
-# Maximum Bitrate (integer)
-#sout-qsv-bitrate-max=0
-
-# Accuracy of RateControl (integer)
-#sout-qsv-accuracy=0
-
-# Convergence time of 'avbr' RateControl (integer)
-#sout-qsv-convergence=0
-
-# Number of slices per frame (integer)
-#sout-qsv-num-slice=0
-
-# Number of reference frames (integer)
-#sout-qsv-num-ref-frame=0
-
-# Number of parallel operations (integer)
-#sout-qsv-async-depth=4
 
 [spudec] # DVD subtitles decoder
 
