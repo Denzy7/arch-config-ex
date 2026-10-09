@@ -31,6 +31,20 @@ require('packer').startup(function(use)
     }
     use 'ntpeters/vim-better-whitespace' -- whitespace bad!
     use 'lewis6991/gitsigns.nvim' -- git hunks made easy
+
+    use {
+        'coder/claudecode.nvim',
+        requires = { 'folke/snacks.nvim' },
+        config = function()
+            require('claudecode').setup()
+
+            local map = vim.keymap.set
+            map('n', '<leader>ac', '<cmd>ClaudeCode<cr>',          { desc = 'Toggle Claude' })
+            map('v', '<leader>as', '<cmd>ClaudeCodeSend<cr>',      { desc = 'Send selection to Claude' })
+            map('n', '<leader>aa', '<cmd>ClaudeCodeDiffAccept<cr>', { desc = 'Accept diff' })
+            map('n', '<leader>ad', '<cmd>ClaudeCodeDiffDeny<cr>',   { desc = 'Deny diff' })
+        end
+}
 end)
 
 function leave_snippet()
