@@ -77,7 +77,26 @@ require('lualine').setup()
 require('neo-tree').setup({
     window = {
         mappings = {
-            ["t"] = "open_tab_drop"
+            -- open in new tab, or jump to the tab that already has it
+            ["t"] = function(state)
+                local node = state.tree:get_node()
+                if node.type ~= "file" then
+                    require("neo-tree.sources.common.commands").toggle_node(state)
+                    return
+                end
+                local path = vim.fn.fnamemodify(node.path, ":p")
+                for _, tab in ipairs(vim.api.nvim_list_tabpages()) do
+                    for _, win in ipairs(vim.api.nvim_tabpage_list_wins(tab)) do
+                        local name = vim.api.nvim_buf_get_name(vim.api.nvim_win_get_buf(win))
+                        if name ~= "" and vim.fn.fnamemodify(name, ":p") == path then
+                            vim.api.nvim_set_current_tabpage(tab)
+                            vim.api.nvim_set_current_win(win)
+                            return
+                        end
+                    end
+                end
+                vim.cmd("tabnew " .. vim.fn.fnameescape(path))
+            end
         }
     }
 
